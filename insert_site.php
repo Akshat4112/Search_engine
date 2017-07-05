@@ -64,10 +64,10 @@ if(isset($_POST['submit'])){
 
      $inser_query="insert into sites (site_title,site_link,site_keywords,site_desc,site_image) values('$site_title','$site_link','$site_keyword','$site_desc','$site_image')";
      move_uploaded_file($site_image_tmp,"images/{$site_image}");
-     if($run_query=mysqli_query($conn,$inser_query)){
-         echo '<script><alert("Data is inserted in database")</script>';
-     }
 
+     if($run_query=mysqli_query($conn,$inser_query)){
+         echo 'Recoed inserted successfully';
+     }
 }
 
 ?>
